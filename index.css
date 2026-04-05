@@ -1,0 +1,256 @@
+:root {
+  --rota-bg: #eef3f9;
+  --rota-card: #ffffff;
+  --rota-primary: #0f2347;
+  --rota-primary-2: #1f3b6d;
+  --rota-text: #24344d;
+  --rota-muted: #6b7a90;
+  --rota-border: #d8e2ee;
+  --rota-accent: #d62828;
+  --rota-accent-hover: #b71f1f;
+  --rota-success: #198754;
+  --rota-shadow: 0 10px 30px rgba(15, 35, 71, 0.08);
+  --rota-radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--rota-bg);
+  color: var(--rota-text);
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+header {
+  max-width: 1100px;
+  margin: 24px auto 18px;
+  padding: 28px 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid var(--rota-border);
+  border-radius: 26px;
+  box-shadow: var(--rota-shadow);
+  text-align: center;
+}
+
+header p {
+  margin: 0 0 10px;
+  color: var(--rota-muted);
+  font-size: 18px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--rota-primary);
+  font-weight: 800;
+}
+
+header > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+main,
+section {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+}
+
+header + div,
+header + section,
+header + main,
+#root > div > div:not(header) {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  background: var(--rota-card);
+  border: 1px solid var(--rota-border);
+  border-radius: 26px;
+  box-shadow: var(--rota-shadow);
+  padding: 28px 24px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--rota-primary);
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  appearance: none;
+  border: 1px solid var(--rota-border);
+  background: #fff;
+  color: var(--rota-primary);
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+  min-height: 46px;
+}
+
+button:hover {
+  background: var(--rota-primary);
+  color: #fff;
+  border-color: var(--rota-primary);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--rota-border);
+  background: #fff;
+  color: var(--rota-text);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 16px;
+  outline: none;
+  min-height: 48px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--rota-primary-2);
+  box-shadow: 0 0 0 4px rgba(31, 59, 109, 0.08);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rota-border);
+  margin: 18px 0;
+}
+
+.resumo {
+  background: #f4f8fd;
+  border: 1px solid var(--rota-border);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  color: var(--rota-primary);
+}
+
+.valor-total {
+  background: #f8fbff;
+  border: 1px solid var(--rota-border);
+  border-radius: 16px;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--rota-primary);
+}
+
+.card-lista,
+.bloco-pedido,
+.bloco-historico {
+  border: 1px solid var(--rota-border);
+  border-radius: 18px;
+  padding: 16px;
+  background: #fff;
+}
+
+strong {
+  color: var(--rota-primary);
+}
+
+select option {
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  header {
+    margin: 16px;
+    padding: 22px 18px;
+  }
+
+  header h1 {
+    font-size: 46px;
+  }
+
+  header + div,
+  header + section,
+  header + main,
+  #root > div > div:not(header) {
+    margin: 0 16px 18px;
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  header > div {
+    flex-direction: column;
+  }
+}
